@@ -21,11 +21,7 @@ def cserel(feladvany, szo, betu):
     eredmeny += szo[-1]
     return eredmeny 
 
-
-
-
-def main():
-    helysegek = beolvas("helyek.txt")
+def gep_gondol(helysegek):
     feladat = random.choice(helysegek)
     kiirando = feladvany(feladat)
     print(kiirando)
@@ -48,6 +44,11 @@ def main():
         print("Gratulálok, eltaláltad!")
     else:
         print("Nem találtad el, a gondolt szó: ", feladat)
+
+
+def main():
+    helysegek = beolvas("helyek.txt")
+    gep_gondol(helysegek)   
 
     
             
